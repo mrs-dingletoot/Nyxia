@@ -29,6 +29,7 @@ model User {
   guildXp         GuildXp[]
   reputation      Reputation[]
   guildWarns      GuildWarns[]
+  tag             String    @default("tag")
 
   @@map(name: "users")
 }
@@ -48,6 +49,7 @@ model Account {
   id_token            String?
   session_state       String?
   user                User      @relation(fields: [userId], references: [discordId])
+  tag                 String    @default("tag")
 
   @@unique([provider, providerAccountId])
   @@map("accounts")
@@ -61,6 +63,7 @@ model Session {
   expires       DateTime
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   user          User      @relation(fields: [userId], references: [discordId])
+  tag           String    @default("tag")
 
   @@map(name: "sessions")
 }
@@ -71,6 +74,7 @@ model VerificationToken {
   identifier  String
   token       String    @unique
   expires     DateTime
+  tag         String    @default("tag")
 
   @@unique([identifier, token])
   @@map(name: "verification_tokens")
@@ -83,6 +87,7 @@ model Suggestions {
   guildId    String?
   message    String
   createdAt  DateTime  @default(now()) @map(name: "created_at")
+  tag        String    @default("tag")
 
   @@map(name: "suggestions")
 }
@@ -93,6 +98,7 @@ model CommandCategories {
   name                    String           @unique
   commands                Commands[]
   guildDisabledCategories GuildDisabledCategories[]
+  tag                     String           @default("tag")
 }
 
 // Slash commands
@@ -104,6 +110,7 @@ model Commands {
   categoryName          String               @map(name: "category_name")
   category              CommandCategories    @relation(fields: [categoryName], references: [name])
   guildDisabledCommands GuildDisabledCommands[]
+  tag                   String               @default("tag")
 
   @@map(name: "commands")
 }
@@ -114,6 +121,7 @@ model Guild {
   guildId               String    @unique @map(name: "guild_id")
   lastUpdated           DateTime  @default(now()) @map(name: "last_updated")
   createdAt             DateTime  @default(now()) @map(name: "created_at")
+  tag                   String    @default("tag")
 
   // XP Module 
   enableXP                          Boolean  @default(false) @map(name: "enable_xp")
@@ -152,6 +160,7 @@ model GuildDisabledCommands {
   command      Commands  @relation(fields: [commandName], references: [name])
   createdAt    DateTime  @default(now()) @map(name: "created_at")
   guild        Guild     @relation(fields: [guildId], references: [guildId])
+  tag          String    @default("tag")
 
   @@map(name: "guild_disabled_commands")
 }
@@ -164,6 +173,7 @@ model GuildDisabledCategories {
   category     CommandCategories    @relation(fields: [categoryName], references: [name])
   createdAt    DateTime             @default(now()) @map(name: "created_at")
   guild        Guild                @relation(fields: [guildId], references: [guildId])
+  tag          String               @default("tag")
 
   @@map(name: "guild_disabled_categories")
 }
@@ -178,6 +188,7 @@ model GuildLogs {
   createdAt  DateTime  @default(now()) @map(name: "created_at")
   guild      Guild     @relation(fields: [guildId], references: [guildId])
   user       User      @relation(fields: [authorId], references: [discordId])
+  tag        String    @default("tag")
 
   @@map(name: "guild_logs")
 }
@@ -191,6 +202,7 @@ model GuildXp {
   createdAt  DateTime  @default(now()) @map(name: "created_at")
   guild      Guild     @relation(fields: [guildId], references: [guildId])
   user       User      @relation(fields: [userId], references: [discordId])
+  tag        String    @default("tag")
 
   @@map(name: "guild_xp")
 }
@@ -204,6 +216,7 @@ model Reputation {
   createdAt   DateTime  @default(now()) @map(name: "created_at")
   guild       Guild     @relation(fields: [guildId], references: [guildId])
   user        User      @relation(fields: [userId], references: [discordId])
+  tag         String    @default("tag")
 
   @@map(name: "reputation")
 }
@@ -215,6 +228,7 @@ model GuildJoin {
   date      DateTime  @default(now())
   joins     Int       @default(0)
   guild     Guild     @relation(fields: [guildId], references: [guildId])
+  tag       String    @default("tag")
 
   @@map(name: "guild_joins")
 }
@@ -226,6 +240,7 @@ model GuildLeave {
   date      DateTime  @default(now())
   leaves    Int       @default(0)
   guild     Guild     @relation(fields: [guildId], references: [guildId])
+  tag       String    @default("tag")
 
   @@map(name: "guild_leaves")
 }
@@ -237,6 +252,7 @@ model GuildMessage {
   date       DateTime  @default(now())
   messages   Int       @default(0)
   guild      Guild     @relation(fields: [guildId], references: [guildId])
+  tag        String    @default("tag")
 }
 
 // Guild giveaways
@@ -247,6 +263,7 @@ model Giveaways {
   data       Json
   createdAt  DateTime  @default(now()) @map(name: "created_at")
   guild      Guild     @relation(fields: [guildId], references: [guildId])
+  tag        String    @default("tag")
 }
 
 // Guild automod rules
@@ -257,6 +274,7 @@ model AutoMod {
   ruleType   String    @map(name: "rule_type")
   createdAt  DateTime  @default(now()) @map(name: "created_at")
   guild      Guild     @relation(fields: [guildId], references: [guildId])
+  tag        String    @default("tag")
 
   @@map(name: "auto_mod")
 }
@@ -271,6 +289,7 @@ model GuildWarns {
   createdAt    DateTime  @default(now()) @map(name: "created_at")
   guild        Guild     @relation(fields: [guildId], references: [guildId])
   user         User      @relation(fields: [userId], references: [discordId])
+  tag          String    @default("tag")
 
   @@map(name: "guild_warns")
 }
@@ -286,6 +305,7 @@ model GuildWelcomeMessage {
   enabled       Boolean   @default(false)
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   guild         Guild     @relation(fields: [guildId], references: [guildId])
+  tag           String    @default("tag")
 
   @@map(name: "guild_welcome_message")
 }
@@ -301,6 +321,7 @@ model GuildLeaveMessage {
   enabled       Boolean   @default(false)
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   guild         Guild     @relation(fields: [guildId], references: [guildId])
+  tag           String    @default("tag")
 
   @@map(name: "guild_leave_message")
 }
