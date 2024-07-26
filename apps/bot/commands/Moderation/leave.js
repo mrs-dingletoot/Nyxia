@@ -71,9 +71,10 @@ export default {
     const title = interaction.options.getString("title") || "👋 Goodbye {user}!";
     const description = interaction.options.getString("description") || "> We're sorry to see you go!";
 
+    const _id = new ObjectId().toString()
     await prismaClient.guildLeaveMessage.upsert({
      where: {
-      guildId: interaction.guild.id,ID: new ObjectId().toString(),
+      guildId: interaction.guild.id,ID: _id,
      },
      update: {
       channelId: channel.id,
@@ -82,7 +83,7 @@ export default {
       enabled: true,
      },
      create: {
-      ID: new ObjectId().toString(),
+      ID: _id,
       guildId: interaction.guild.id,
       channelId: channel.id,
       title: shortenText(title, 250),

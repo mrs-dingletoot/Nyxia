@@ -76,7 +76,7 @@ export async function ready(client) {
         }
 
     } catch (e) {
-       console.error('error', e);
+       console.error('error', e); 
        return null;
     }
 }
@@ -86,7 +86,7 @@ export async function ready(client) {
 
     await prismaClient.botData.upsert({
         where: {
-            tag: "tag", ID: new ObjectId().toString(),
+            tag: "tag",
             ID: new ObjectId().toString()
         },
         update: {

@@ -48,8 +48,12 @@ for (const slashCommand of slashCommands) {
 
     const category = slashCommand.split("/")[slashCommand.split("/").length - 2];
 
+    const id = new ObjectId().toString();
     commandsData.push({
-        where: { ID: new ObjectId().toString(),name },
+        where: { 
+            ID: id,
+            name
+        },
         update: {
             name,
             description,
@@ -61,7 +65,7 @@ for (const slashCommand of slashCommands) {
             },
         },
         create: {
-            ID: new ObjectId().toString(),
+            ID: id,
             name,
             description,
             options: options || [],

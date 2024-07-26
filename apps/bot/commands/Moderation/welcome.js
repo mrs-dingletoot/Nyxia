@@ -71,8 +71,10 @@ export default {
     const title = interaction.options.getString("title") || "🎉 Welcome to the server {user}!";
     const description = interaction.options.getString("description") || "> Welcome to **{guild}** We hope you enjoy your stay here!";
 
+    const _id = new ObjectId().toString();
     await prismaClient.guildWelcomeMessage.upsert({
-     where: {ID: new ObjectId().toString(),
+     where: {
+        ID: _id,
       guildId: interaction.guild.id,
      },
      update: {
@@ -82,7 +84,7 @@ export default {
       enabled: true,
      },
      create: {
-      ID: new ObjectId().toString(),
+      ID: _id,
       guildId: interaction.guild.id,
       channelId: channel.id,
       title: shortenText(title, 250),
