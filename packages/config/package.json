@@ -1,0 +1,21 @@
+{
+ "name": "@nyxia/config",
+ "version": "6.0.0",
+ "exports": {
+  ".": "./index.js",
+  "./bot": "./configs/bot.js",
+  "./dashboard": "./configs/dashboard.js",
+  "./debugger": "./configs/debugger.js",
+  "./global": "./configs/global.js",
+  "./permissions": "./configs/permissions.js"
+ },
+ "type": "module",
+ "dependencies": {
+  "discord-api-types": "0.37.93",
+  "dotenv": "16.4.5"
+ },
+ "engines": {
+  "node": ">=20.0.0"
+ },
+ "packageManager": "pnpm@9.6.0"
+}
