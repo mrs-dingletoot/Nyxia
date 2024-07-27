@@ -3,7 +3,7 @@ import { test } from "@playwright/test";
 test.setTimeout(210000);
 test.use({ actionTimeout: 20000 });
 
-const endpoints = ["/", "/commands", "/auth/login";
+const endpoints = ["/", "/commands", "/auth/login"];
 const defaultURL = process.env.ENVIRONMENT_URL || "https://nyxia.vercel.app";
 const dimensions = [
  { width: 1920, height: 1080, name: "large" },
