@@ -1,9 +1,17 @@
 ![Header](/apps/dashboard/public/assets/images/banner.png)
 
-## 🌸 Nyxia - Your servers one and only
-Nyxia is a highly modified version of Majo.exe! You can view the original repository by Igor Kowalczyk at the bottom of this page.
+<h1 align="center">
+  <strong>🌸Nyxia🌸</strong>
+</h1>
 
-You can contact us via our support server or by shooting us an email at **tsukiyodev@gmail.com**!
+
+<p align="center">
+  Nyxia is a highly modified version of Majo.exe! You can view the original repository by Igor Kowalczyk and other links [here](#️-useful-links)
+</p>
+
+<p align="center">
+  You can contact us via our support server or by shooting us an email at <strong>tsukiyodev@gmail.com</strong>!
+</p>
 
 
 > [!TIP]
