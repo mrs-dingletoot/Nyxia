@@ -1,7 +1,7 @@
 ![Header](/apps/dashboard/public/assets/images/banner.png)
 
 <h1 align="center">
-  <strong>🌸Nyxia🌸</strong>
+  <strong>🌸Nyxia🌸 (incomplete project)</strong>
 </h1>
 
 
