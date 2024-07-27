@@ -11,7 +11,9 @@ You can contact us via our support server or by shooting us an email at **tsukiy
 
 
 > [!CAUTION]
-> TsukiyoDev Team and fellow devs will not provide assistance with self-hosting. This repo is meant for developer-to-user transparency, contributions and further development. Nyxia is not designed with self-hosting in mind but if you want to try feel free to give it a shot, just know we will not provide support for any issues you may have so you are on your own.
+> TsukiyoDev Team and fellow developers will not provide assistance with self-hosting. This repository is intended for transparency, contributions, and further development between developers and users. Nyxia is not designed for self-hosting; however, if you choose to attempt it, you are welcome to do so at your own risk. Please be aware that we will not offer support for any issues that arise from self-hosting, and you will need to resolve any problems independently.
+> Additionally, we will not accept contributions or provide support for repositories that are not officially forked from our repository. Contributions must come from officially forked repositories to ensure proper integration and maintain the integrity of the project.
+> Our [Terms of Service](https://github.com/TsukiyoDevs/TsukiyoDevs/wiki/Terms-and-Conditions-of-Use) govern the use of this repository and associated services. By using or contributing to this repository, you agree to adhere to these terms. Any violation of our Terms of Service may result in the termination of access or use of our services and could potentially lead to legal action if deemed necessary. We reserve the right to enforce our terms to protect the integrity of our project and ensure a fair and lawful use of our services.
 <!-- prettier-ignore-end -->
 
 ## ⛓️‍💥 Useful links
