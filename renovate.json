@@ -1,11 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "Australia/Hobart",
   "extends": [
     "config:recommended"
   ],
   "packageRules": [
     {
-      "matchManagers": ["npm"],
       "postUpgradeTasks": {
         "commands": ["pnpm install"],
         "fileFilters": ["package.json", "pnpm-lock.yaml"]
