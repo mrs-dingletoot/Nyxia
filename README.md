@@ -19,6 +19,7 @@
 > [!TIP]
 > Currently Nyxia is not online/available to be added to your server *just yet* but will be in the future so keep an eye on this message!
 
+<br />
 
 > [!CAUTION]
 > TsukiyoDev Team and fellow developers will not provide assistance with self-hosting. This repository is intended for transparency, contributions, and further development between developers and users. Nyxia is not designed for self-hosting; however, if you choose to attempt it, you are welcome to do so at your own risk. Please be aware that we will not offer support for any issues that arise from self-hosting, and you will need to resolve any problems independently.
