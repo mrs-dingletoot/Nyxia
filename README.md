@@ -6,13 +6,15 @@
 
 
 <p align="center">
-  Nyxia is a highly modified version of Majo.exe! You can view the original repository by Igor Kowalczyk and other links [here](#️useful-links)
+  Nyxia is a highly modified version of Majo.exe! You can view the original repository by Igor Kowalczyk and other links at the bottom of this page.
 </p>
 
 <p align="center">
-  You can contact us via our support server or by shooting us an email at <strong>tsukiyodev@gmail.com</strong>!
+  You can contact us via our support server, where you can reach out to a developer for assistance. Alternatively, you can open an issue on this repository if you have any questions or need help. You can also shoot us an email at <strong>tsukiyodev@gmail.com</strong>!
 </p>
 
+<br />
+<br />
 
 > [!TIP]
 > Currently Nyxia is not online/available to be added to your server *just yet* but will be in the future so keep an eye on this message!
@@ -25,6 +27,8 @@
 > 
 > Our [Terms of Service](https://github.com/TsukiyoDevs/TsukiyoDevs/wiki/Terms-and-Conditions-of-Use) govern the use of this repository and associated services. By using or contributing to this repository, you agree to adhere to these terms. Any violation of our Terms of Service may result in the termination of access or use of our services and could potentially lead to legal action if deemed necessary. We reserve the right to enforce our terms to protect the integrity of our project and ensure a fair and lawful use of our services.
 
+<br />
+<br />
 
 ## ⛓️‍💥 Useful links
 - [**Original Repo**](https://github.com/IgorKowalczyk/majo.exe/)
