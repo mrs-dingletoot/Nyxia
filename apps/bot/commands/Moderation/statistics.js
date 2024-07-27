@@ -87,7 +87,7 @@ export default {
 
   if (command === "invite") {
    const rawData = await prismaClient.guildJoin.findMany({
-    where: {ID: new ObjectId().toString(),
+    where: {tag: "tag",
      guildId: interaction.guild.id,
      date: {
       gte: new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000),
@@ -117,7 +117,7 @@ export default {
    return interaction.followUp({ ephemeral: false, embeds: [embed], files: [attachment] });
   } else if (command === "leave") {
    const rawData = await prismaClient.guildLeave.findMany({
-    where: {ID: new ObjectId().toString(),
+    where: {tag: "tag",
      guildId: interaction.guild.id,
      date: {
       gte: new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000),
@@ -147,7 +147,7 @@ export default {
    return interaction.followUp({ ephemeral: false, embeds: [embed], files: [attachment] });
   } else if (command === "messages") {
    const rawData = await prismaClient.guildMessage.findMany({
-    where: {ID: new ObjectId().toString(),
+    where: {tag: "tag",
      guildId: interaction.guild.id,
      date: {
       gte: new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000),

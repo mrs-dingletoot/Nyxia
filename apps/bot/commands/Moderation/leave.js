@@ -74,7 +74,8 @@ export default {
     const _id = new ObjectId().toString()
     await prismaClient.guildLeaveMessage.upsert({
      where: {
-      guildId: interaction.guild.id,ID: _id,
+      guildId: interaction.guild.id,
+      tag: "tag"
      },
      update: {
       channelId: channel.id,
@@ -120,7 +121,8 @@ export default {
     await interaction.followUp({ embeds: [embed] });
    } else if (command === "disable") {
     await prismaClient.guildLeaveMessage.update({
-     where: {ID: new ObjectId().toString(),
+     where: {
+      tag: "tag",
       guildId: interaction.guild.id,
      },
      data: {
@@ -144,7 +146,7 @@ export default {
     await interaction.followUp({ embeds: [embed] });
    } else if (command === "check") {
     const guild = await prismaClient.guild.findUnique({
-     where: {ID: new ObjectId().toString(),
+     where: {tag: "tag",
       guildId: interaction.guild.id,
      },
      include: {
@@ -172,7 +174,7 @@ export default {
 
      if (!channel) {
       await prismaClient.guildLeaveMessage.delete({
-       where: {ID: new ObjectId().toString(),
+       where: {tag: "tag",
         guildId: interaction.guild.id,
        },
       });

@@ -106,7 +106,8 @@ export async function guildMemberRemove(client, member) {
 
  await prismaClient.botData.update({
     where: {
-        tag: "tag", ID: new ObjectId().toString()
+        tag: "tag",
+        botId: "1259410182266683413"
     },
     data: {
         users: {

@@ -87,7 +87,7 @@ export async function ready(client) {
     await prismaClient.botData.upsert({
         where: {
             tag: "tag",
-            ID: new ObjectId().toString()
+            botId: "1259410182266683413"
         },
         update: {
             users: userCount

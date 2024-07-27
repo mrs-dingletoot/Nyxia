@@ -17,7 +17,8 @@ export default {
 
    const xp = await prismaClient.guildXp.findMany({
     where: {
-     guildId: interaction.guild.id,ID: new ObjectId().toString(),
+     guildId: interaction.guild.id,
+     tag: "tag",
     },
     orderBy: {
      xp: "desc",

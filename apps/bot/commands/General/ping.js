@@ -1,5 +1,5 @@
 import prismaClient from "@nyxia/database";
-import { ApplicationCommandType, EmbedBuilder, codeBlock, Status } from "discord.js";
+import { ApplicationCommandType, EmbedBuilder, codeBlock, Status, ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
 
 export default {
  name: "ping",
@@ -13,7 +13,14 @@ export default {
    const dbTime = performance.now();
    const waitEmbed = new EmbedBuilder().setColor(guildSettings?.embedColor || client.config.defaultColor).setDescription("> *Loading...*");
    const message = await interaction.followUp({ embeds: [waitEmbed] });
-   await prismaClient.user.findUnique({ where: { id: "1" } });
+   await prismaClient.user.findUnique(
+    { 
+        where: { 
+            discordId: interaction.user.id,
+            tag: "tag"
+        } 
+    }
+);
    const dbTiming = performance.now() - dbTime;
 
    const thisServerShard = client.ws.shards.get(interaction.guild.shardId);
@@ -21,7 +28,7 @@ export default {
    const pingMessage = new EmbedBuilder()
     .setColor(guildSettings?.embedColor || client.config.defaultColor)
     .setTimestamp()
-    .setTitle("🏓 Pong!")
+    .setTitle("⏱️ Service Timings")
     .addFields([
      {
       name: "Host Latency",
@@ -55,7 +62,15 @@ export default {
       size: 256,
      }),
     });
-   await message.edit({ ephemeral: false, embeds: [pingMessage] });
+
+    const row = new ActionRowBuilder()
+        .addComponents(
+            new ButtonBuilder()
+                .setLabel("Status Page")
+                .setStyle(ButtonStyle.Link)
+                .setURL("https://status.tsukiyodevteam.xyz/")
+        )
+   await message.edit({ ephemeral: false, embeds: [pingMessage], components:[row] });
   } catch (err) {
    client.errorMessages.internalError(interaction, err);
   }

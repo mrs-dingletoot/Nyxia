@@ -185,7 +185,8 @@ export default async function HomePage() {
 
  const userCount = await prismaClient.botData.findFirst({
    where :{
-      tag: "tag", ID: new ObjectId().toString()
+      tag: "tag",
+      botId: "1259410182266683413"
    },
     select: {
         users: true

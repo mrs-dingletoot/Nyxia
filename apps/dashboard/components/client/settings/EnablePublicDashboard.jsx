@@ -70,10 +70,10 @@ export function EnablePublicDashboard({ enabled, serverId, vanityURL }) {
     setVanityError(false);
    }
   }
-  if (e.target.value.length > 20) {
+  else if (e.target.value.length > 20) {
    setVanityError("Vanity URL can only be 20 characters long.");
   }
-  if (e.target.value.length === 0) {
+  else if (e.target.value.length === 0) {
    setVanityError(false);
   }
  };
@@ -157,7 +157,7 @@ export function EnablePublicDashboard({ enabled, serverId, vanityURL }) {
         "hidden select-none rounded-md rounded-r-none border border-r-0 border-r-transparent bg-transparent py-2 pl-3 font-normal text-white/60 shadow-sm outline-none !ring-0 duration-200 sm:block"
        )}
       >
-       {process.env.NEXT_PUBLIC_URL}/server/
+       https://nyxia.vercel.app/server/
       </div>
      </div>
      <ButtonPrimary onClick={(e) => updateVanity(e)} disabled={disabled || vanityError || vanity.length === 0 || buttonText === "Updating..."} className="mx-auto font-normal md:mx-0">

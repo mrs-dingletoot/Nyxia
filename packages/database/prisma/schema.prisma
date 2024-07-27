@@ -331,6 +331,7 @@ model botData {
   ID            String    @id @map("_id") @default(auto()) @db.ObjectId    
   users         Int
   tag           String    @default("tag")
+  botId         String    @default("1259410182266683413")
   cmdsran       Int       @default(0)
  
   @@map(name: "bot_data")

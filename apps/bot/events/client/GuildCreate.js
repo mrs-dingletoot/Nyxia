@@ -5,7 +5,7 @@ import { ObjectId } from "mongodb";
 export async function GuildCreate({ guild }) {
  try {
   await prismaClient.guild.upsert({
-   where: {ID: new ObjectId().toString(),
+   where: {tag: "tag",
     guildId: guild.id,
    },
    update: {},
