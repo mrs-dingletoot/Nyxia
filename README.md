@@ -22,7 +22,7 @@
 <br />
 
 > [!CAUTION]
-> TsukiyoDev Team and fellow developers will not provide assistance with self-hosting. This repository is intended for transparency, contributions, and further development between developers and users. Nyxia is not designed for self-hosting; however, if you choose to attempt it, you are welcome to do so at your own risk. Please be aware that we will not offer support for any issues that arise from self-hosting, and you will need to resolve any problems independently.
+> TsukiyoDev Team and fellow developers will not provide assistance with self-hosting. This repository is intended for transparency, contributions, and further development between developers and users. Nyxia is not designed for self-hosting in mind; however, if you choose to attempt it, you are welcome to do so at your own risk. Please be aware that we will not offer support for any issues that arise from self-hosting, and you will need to resolve any problems independently.
 > 
 > Additionally, we will not accept contributions or provide support for repositories that are not officially forked from our repository. Contributions must come from officially forked repositories to ensure proper integration and maintain the integrity of the project.
 > 
