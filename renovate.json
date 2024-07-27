@@ -7,6 +7,7 @@
   "packageRules": [
     {
       "postUpgradeTasks": {
+        "matchManagers": ["pnpm"],
         "commands": ["pnpm install"],
         "fileFilters": ["package.json", "pnpm-lock.yaml"]
       }
