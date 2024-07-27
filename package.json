@@ -34,5 +34,36 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "keywords": [
+    "Discord",
+    "Bot",
+    "Discord.js",
+    "js",
+    "Dashboard",
+    "Next.js",
+    "Next",
+    "JavaScript",
+    "Java",
+    "Script",
+    "Development",
+    "Integration",
+    "Web",
+    "Custom",
+    "Framework",
+    "Dreamwxve",
+    "Nyxia",
+    "Interface",
+    "UI",
+    "Management",
+    "Features",
+    "Setup",
+    "Admin",
+    "Customizable",
+    "Interactive",
+    "Tools",
+    "Advanced",
+    "Admin Panel",
+    "v14"
+  ],
   "packageManager": "pnpm@9.6.0"
 }
