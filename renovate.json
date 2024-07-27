@@ -5,7 +5,7 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["pnpm"],
+      "matchManagers": ["npm"],
       "postUpgradeTasks": {
         "commands": ["pnpm install"],
         "fileFilters": ["package.json", "pnpm-lock.yaml"]
