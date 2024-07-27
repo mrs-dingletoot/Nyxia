@@ -6,7 +6,7 @@
 
 
 <p align="center">
-  Nyxia is a highly modified version of Majo.exe! You can view the original repository by Igor Kowalczyk and other links [here](#️-useful-links)
+  Nyxia is a highly modified version of Majo.exe! You can view the original repository by Igor Kowalczyk and other links [here](#️useful-links)
 </p>
 
 <p align="center">
